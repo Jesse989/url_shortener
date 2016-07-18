@@ -1,0 +1,26 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "fcc backend project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesse989/url_shortener.git"
+  },
+  "author": "Jesse989",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesse989/url_shortener/issues"
+  },
+  "homepage": "https://github.com/Jesse989/url_shortener#readme",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.4",
+    "validator": "^5.4.0"
+  }
+}
