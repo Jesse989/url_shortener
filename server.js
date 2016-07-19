@@ -1,6 +1,6 @@
 var express = require("express");
 require("./models/links");
-var config = require(".env/config")
+var config = require("./.env/config")
 var api = require('./routes/api');
 var home = require("./routes/home");
 var mongoose = require("mongoose");
