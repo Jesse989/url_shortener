@@ -7,7 +7,7 @@ var mongoose = require("mongoose");
 var env = require("./.env/mongodb");
 
 var app = express();
-mongoose.connect(PROD_MONGODB);
+mongoose.connect(process.env.PROD_MONGODB);
 
 
 
