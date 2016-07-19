@@ -1,13 +1,13 @@
 var express = require("express");
 require("./models/links");
-
+var config = require(".env/config")
 var api = require('./routes/api');
 var home = require("./routes/home");
 var mongoose = require("mongoose");
-var env = require("./.env/mongodb");
+
 
 var app = express();
-mongoose.connect(process.env.PROD_MONGODB);
+mongoose.connect('mongodb://'+config.username+':'+config.password+'@ds011735.mlab.com:11735/ecommerce');
 
 
 
