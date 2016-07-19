@@ -7,7 +7,9 @@ var mongoose = require("mongoose");
 var env = require("./.env/mongodb");
 
 var app = express();
-mongoose.connect('mongodb://'+env.username+':'+env.password+'@ds011735.mlab.com:11735/ecommerce');
+mongoose.connect(PROD_MONGODB);
+
+
 
 app.use(express.static(__dirname + '/public'));
 app.set('views', './views');
