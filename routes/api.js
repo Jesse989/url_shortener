@@ -22,7 +22,7 @@ function insertLink(req, res){
     Link.findOne({ oldLink: req.params.id }, function(err, result){
         if(err) throw err;
         if(result){
-            res.end( JSON.stringify(result.oldLink) + " is already in database: \n https://url-shortener-jesse989.c9users.io/"+result.newLink);
+            res.end( JSON.stringify({"original_link" : "https://"+result.oldLink, "new_link" : "https://urlshortenerfcc.herokuapp.com/"+result.newLink}));
         }
         if(!result){
             var link = new Link();
@@ -33,7 +33,7 @@ function insertLink(req, res){
                 if (err){
                     return res.status(500).send(err);
                 }
-            res.end(JSON.stringify(post.oldLink) + " is now registered at: \n https://url-shortener-jesse989.c9users.io/"+post.newLink);
+            res.end(JSON.stringify({"original_link" : "https://"+post.oldLink, "new_link" : "https://urlshortenerfcc.herokuapp.com/"+post.newLink}));
             });
         }
     });
