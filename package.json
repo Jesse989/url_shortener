@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Jesse989/url_shortener#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "mongoose": "^4.5.4",
